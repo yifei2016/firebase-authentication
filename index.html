@@ -3,20 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>authentication</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAZneotCK53h1yPgcMm2kAeOE7OkFxzzcE",
-      authDomain: "assignment-2-9371c.firebaseapp.com",
-      databaseURL: "https://assignment-2-9371c.firebaseio.com",
-      storageBucket: "assignment-2-9371c.appspot.com",
-      messagingSenderId: "354750960340"
-    };
-    firebase.initializeApp(config);
-    </script>
+    <span id="gitHubLogin">
+      <a data-toggle="tooltip" data-placement="right" title="Sign in with gitHub"  style="border:none; background:none;" onclick="login()">
+        <img src="img/githubIcon.png" alt="problem">
+      </a>
+    </span>
+    <button type="button" class="btn btn-info">Special user</button>
+    <div id="errDiv"></div>
+      <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+      <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC30KLcwWofOWB8sZ1WApCqTBUOQ3PIhq0",
+        authDomain: "javascript-8a648.firebaseapp.com",
+        databaseURL: "https://javascript-8a648.firebaseio.com",
+        storageBucket: "javascript-8a648.appspot.com",
+        messagingSenderId: "699049913017"
+      };
+      firebase.initializeApp(config);
+      </script>
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      <script src="js/login.js"></script>
+      <script>
 
-  </body>
+      </script>
+    </body>
 </html>

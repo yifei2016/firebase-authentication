@@ -1,0 +1,7 @@
+body{
+  padding: 3% 3% 3% 3%;
+}
+#hoverButton:active{
+  border:none;
+  outline: none;
+}
