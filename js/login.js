@@ -3,8 +3,11 @@ function login(){
   // firebase.auth().signInWithRedirect(provider);//from index page redirect to github login
   firebase.auth().signInWithPopup(provider)
   .then(function(result){
+    console.log(result);
     if(result.user !== null){
-      sessionStorage.user = JSON.stringify(result.user);
+      window.sessionStorage.user = JSON.stringify(result.user);
+      //stringify user property to string, manually give sessionStorage object a property named user,
+      //result.user, user is built in prop
       //send user to homepage
       window.location.replace("http://localhost:3000/home.html");
     }else{
@@ -15,7 +18,6 @@ function login(){
   .catch(function(err){
     error.innerHTML = `<span class="alert alert-danger" role="alert"><strong>Oh snap!</strong>${err.message}</span>`
   })
-
 }
 //github send to firebase, firebase redirect back
 var gitHubLogin = document.getElementById("gitHubLogin");
