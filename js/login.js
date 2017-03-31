@@ -3,11 +3,11 @@ function login(){
   // firebase.auth().signInWithRedirect(provider);//from index page redirect to github login
   firebase.auth().signInWithPopup(provider)
   .then(function(result){
-    console.log(result);
+    console.log(result.user);
     if(result.user !== null){
       window.sessionStorage.user = JSON.stringify(result.user);
       //stringify user property to string, manually give sessionStorage object a property named user,
-      //result.user, user is built in prop
+      //result.user, user is built in property
       //send user to homepage
       window.location.replace("http://localhost:3000/home.html");
     }else{

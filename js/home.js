@@ -1,16 +1,32 @@
 window.onload = function(){
   let user = sessionStorage.user;
+  let special = document.getElementById("special");
   if(user ===  undefined || user === null){
     window.location.replace("http://localhost:3000");
   }else{
     // Om autentisering lyckas, så finns användarinfo i user
     let userInfo = document.getElementById("userInfo");
     user = JSON.parse(user);//parse user string to object
+    console.log(user)
     userInfo.innerHTML = user.displayName;
+    if(user.displayName==="Yifei Wang"){
+      special.disabled = false;
+    } else {
+      special.disabled = true;
+    }
     let imageDiv = document.getElementById("imageDiv");
     imageDiv.setAttribute( 'src', user.photoURL );
   }
 }
+//   special.addEventListener("click",function(event){
+//     console.log(user)
+//     //event.preventDefault();
+//     //user = JSON.parse(user);
+//     /*if(user.displayName==="David Andersson"){
+//       special.disabled = true;
+//     }else*/
+//   })
+// }
 function logOut(){
   firebase.auth().signOut()
   .then(function(result) {
