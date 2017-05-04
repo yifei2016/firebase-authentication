@@ -2,7 +2,7 @@ window.onload = function(){
   let user = sessionStorage.user;
   let special = document.getElementById("special");
   if(user ===  undefined || user === null){
-    window.location.replace("http://localhost:3000");
+    window.location.href = '/';
   }else{
     // Om autentisering lyckas, så finns användarinfo i user
     let userInfo = document.getElementById("userInfo");
@@ -34,7 +34,7 @@ function logOut(){
     delete sessionStorage.user;
     //delete often is used on deleting object property, but can also be used on deleting what value,
     //in this case, to delete user property
-    window.location.replace("http://localhost:3000");
+     window.location.href = '/';
   })
   .catch(function(err) {
     // Utloggning misslyckades
