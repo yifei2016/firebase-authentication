@@ -9,7 +9,8 @@ function login(){
       //stringify user property to string, manually give sessionStorage object a property named user,
       //result.user, user is built in property
       //send user to homepage
-      window.location.replace("http://localhost:3000/home.html");
+      window.location.href = '/home.html';
+      // window.location.replace("http://localhost:3000/home.html");
     }else{
       // fail, show log in page
       error.innerHTML = `<span class="alert alert-danger" role="alert">Login failed, please try again</span>`
